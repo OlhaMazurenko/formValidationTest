@@ -1,0 +1,120 @@
+body {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    background-color: rgb(170, 197, 196);
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.content {
+    flex-grow: 1;
+}
+
+h1 {
+    margin-top: 30vh;
+    font-family: 'Paytone One', sans-serif;
+}
+
+.form-container {
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-around;
+}
+
+#form1 {
+    max-width: 900px;
+    background-color: rgb(255, 255, 255);
+    width: 80%;
+    margin-top: 20vh;
+    padding: 20px 0;
+    min-width: 500px;
+}
+
+.btn {
+    padding: 5px;
+    margin-top: 5px;
+    margin-left: 30px;
+    padding: 5px;
+    margin-top: 5px;
+    margin-left: 4vw;
+    font-size: 15px;
+}
+
+#registrationForm {}
+
+.rowLine {
+    padding-top: 10px;
+    width: 75%;
+}
+
+.leftSide {
+    display: inline-block;
+    text-align: right;
+    width: 40%;
+    padding: 5px;
+    margin-top: 10px;
+    vertical-align: bottom;
+    margin-right: 10px;
+}
+
+.rightSide {
+    display: inline-block;
+    text-align: left;
+    vertical-align: bottom;
+}
+
+.radio {
+    display: inline-block;
+}
+
+#country {
+    width: 170px;
+    padding: 5px;
+}
+
+#notes {
+    height: 50px;
+    resize: vertical;
+    width: 170px;
+}
+
+
+/*/////////////////////////////////////////////////////////////////*/
+
+.textfield_error {
+    box-shadow: 0 0 5px red;
+    display: inline-block;
+}
+
+.form__message {
+    border: 1px solid;
+    border-radius: 3px;
+    margin: 10px 0;
+    padding: 10px;
+    display: none;
+}
+
+.form__message_error {
+    background: none repeat scroll 0 0 #FF0000;
+    border-color: #E30000;
+    color: #FFFFFF;
+}
+
+.reqField {
+    background: none repeat scroll 0 0 #FF0000;
+    border-color: #E30000;
+    color: #FFFFFF;
+    display: none;
+}
+
+.error,
+#genderError {
+    color: red;
+    font-weight: bold;
+    width: 170px;
+}

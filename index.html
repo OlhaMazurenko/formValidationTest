@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Forms</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Paytone+One" rel="stylesheet">
+    <link rel="stylesheet" href="jquery-ui.min.css">
+    <scripts type="text/javascript" src="error.js"></scripts>
+</head>
+
+<body>
+    <div class="container">
+        <div class="content">
+            <h1>Please, fill in 
+                <br>   the form</h1>
+        </div>
+        <div class="form-container">
+            <div id="form1">
+                <h2>Registration form</h2>
+                <form method="get" id="registrationForm" name="f1" action="#" class="b_form" onsubmit="return validation();">
+
+                    <div class="rowLine">
+                        <div class="leftSide">
+                            <label for="name" id="name-label">First name*</label>
+                        </div>
+                        <div class="rightSide ">
+                            <input type="text" id="name" name="name" class="inputField textfield" placeholder="Enter your name">
+                            <div id="nameError" class="error">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rowLine">
+                        <div class="leftSide">
+                            <label for="lastName" id="lastName-label">Last name* </label>
+                        </div>
+                        <div class="rightSide">
+                            <input type="text" id="lastName" name="lastName" class="inputField textfield" placeholder="Enter your last name">
+                            <div id="lastNameError" class="error"></div>
+                        </div>
+                    </div>
+                    <div class="rowLine">
+                        <div class="leftSide">
+                            <label for="birthday" id="birthday-label">Birthday*</label>
+                        </div>
+                        <div class="rightSide">
+                            <input type="text" id="birthday" name="birthday" class="textfield datepicker" placeholder="dd\mm\yyyy">
+                            <div id="birthdayError" class="error"></div>
+                        </div>
+                    </div>
+                    <div class="rowLine">
+                        <div class="leftSide">
+                            <label for="gender" id="gender-label" class="inputField ">Gender*</label>
+                        </div>
+                        <div class="rightSide" class="genderError">
+                            <ul style="list-style:none;">
+                                <li class="radio" id="gender">
+                                    <label for="female">Female
+                                        <input type="radio" value="female" id="female" class="gender" name="radio-buttons">
+                                    </label>
+                                </li>
+                                <li class="radio">Male
+                                    <label for="male">
+                                        <input type="radio" value="male" id="male" class="gender" name="radio-buttons">
+                                    </label>
+                                </li>
+                            </ul>
+                            <div id="genderError"></div>
+                        </div>
+                    </div>
+                    <div class="rowLine">
+                        <div class="leftSide">
+                            <label for="country" id="country-label">Country*</label>
+                        </div>
+                        <div class="rightSide">
+                            <select name="myCountry" id="country" class="textfield">
+                                <option value selected disabled>Select your country</option>
+                                <option value="ukraine">Ukraine</option>
+                                <option value="russia">Russia</option>
+                                <option value="belarus">Belarus</option>
+                            </select>
+                            <div id="countryError" class="error">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rowLine">
+                        <div class="leftSide">
+                            <label for="email" id="email-label">Email*</label>
+                        </div>
+                        <div class="rightSide">
+                            <input type="email" id="email" class="inputField textfield" placeholder="Enter your e-mail">
+                            <div id="emailError" class="error">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rowLine">
+                        <div class="leftSide">
+                            <label for="userPassword" id="password">Password*</label>
+                        </div>
+                        <div class="rightSide">
+                            <input id="userPassword" type="password" autocomplete="off" placeholder="Enter your password" class="textfield">
+                            <div id="userPasswordError" class="error">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rowLine">
+                        <div class="leftSide">
+                            <label for="adress" id="adress-label">Address*</label>
+                        </div>
+                        <div class="rightSide">
+                            <input type="text" id="adress" class="user-adress textfield" name="adress" placeholder="Enter your adress">
+                            <div id="adressError" class="error"></div>
+                        </div>
+                    </div>
+                    <div class="rowLine">
+                        <div class="leftSide">
+                            <label for="notes" id="notes-label">Comments</label>
+                        </div>
+                        <div class="rightSide">
+                            <textarea name="notes" id="notes" class="notes" name="notes" cols="30" rows="10" placeholder="Enter your comment here..."></textarea>
+                            <div id="notesError" class="error">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="submitButton">
+                        <button type="submit" class="btn">Send information</button>
+                    </div>
+                    <div class='form__message form__message_error'>
+                        Please, also fill in the highlighted lines
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script type="text/jscript" src="validator.js"></script>
+    <script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="form_checker.js"></script>
+    <script>
+        var fch = new form_checker('#registrationForm');
+    </script>
+    <script type="text/jscript" src="jquery-ui.min.js"></script>
+    <script>
+        $(".datepicker").datepicker();
+    </script>
+
+
+
+</body>
+
+</html>
